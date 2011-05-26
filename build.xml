@@ -2,7 +2,8 @@
   <property name="source-directory" location="." />
 
   <path id="CLASSPATH">
-		<pathelement location="/Users/stephenwalker/Projects/junit/junit-4.9b2.jar" />
+    <pathelement location="/Users/stephenwalker/Projects/junit/junit-4.9b2.jar" />
+    <pathelement location="${source-directory}" />
   </path>
 
   <target name="compile">
@@ -21,7 +22,7 @@
   <target name="test" depends="compile">
     <junit>
       <classpath refid="CLASSPATH" />
-      <formatter type="brief" usefile="true" />
+      <formatter type="brief" usefile="false" />
       <test name="PrimeFactorsTest" />
     </junit>
   </target>
